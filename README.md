@@ -32,6 +32,8 @@ Ensure all tests use Nightwatch Page objects to interact with elements on the we
 ## 2. Testing mock-user-auth API with Supertest
 
 ### a. API Routes Tests
+- Test all the API route found on the mock-user-auth and supertest - npm
+(npmjs.com)
 
 1. **Test Valid Body:**
    - **Description:** Validate hitting the routes with a valid request body.
@@ -53,8 +55,10 @@ Ensure all tests use Nightwatch Page objects to interact with elements on the we
    - **Input:** Send an invalid authorization token to each API route.
    - **Expected Output:** Expect an error response (status 4xx) from each route.
 
+
 ## Documentation  
 - A test Case Documentation showing all the test cases performed on testing the website
 - A bug report showing all the Bugs faced during the execution
+
 
 
