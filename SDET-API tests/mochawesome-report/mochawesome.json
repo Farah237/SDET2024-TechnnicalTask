@@ -1,0 +1,293 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 1,
+    "pending": 0,
+    "failures": 5,
+    "start": "2024-02-22T16:48:41.196Z",
+    "end": "2024-02-22T16:48:41.255Z",
+    "duration": 59,
+    "testsRegistered": 7,
+    "passPercent": 14.285714285714285,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "6641dec1-6d25-476b-9a03-f9ddb31eb932",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Should not delete all users with invalid key admin",
+          "fullTitle": "Should not delete all users with invalid key admin",
+          "timedOut": false,
+          "duration": 0,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "const response = await request(address).delete('/api/v1/all-users').send({\n  key_admin: '',\n});\nexpect(response.statusCode).toEqual(403);\nexpect(response.body.message).toEqual('Unauthorized access');",
+          "err": {},
+          "uuid": "7e5dfdb9-07a8-4061-a603-88054b7a3f92",
+          "parentUUID": "6641dec1-6d25-476b-9a03-f9ddb31eb932",
+          "isHook": false,
+          "skipped": true
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "3674a3df-d665-4b3a-8694-676f12b9656a",
+          "title": "Test Auth API",
+          "fullFile": "C:\\Users\\Farah.Kenawy\\Desktop\\SDET-TechnicalTask\\SDET-API tests\\APITests\\api.js",
+          "file": "\\APITests\\api.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook",
+              "fullTitle": "Test Auth API \"before each\" hook",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (\n  this.currentTest.title === \"creating a new user\"\n) {\n  // Skip user creation for a specific test\n  console.log(\"Skipping user creation for Specific Test Case\");\n  return;\n}\nawait request(address).post(\"/api/v1/users\").send(register);",
+              "err": {},
+              "uuid": "8953212f-f513-47f0-b223-59a2a656843e",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook",
+              "fullTitle": "Test Auth API \"after each\" hook",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(address)\n  .delete(\"/api/v1/all-users\")\n  .send({ key_admin: \"keyadmin123\" });\nexpect(response.status).equal(200);\nexpect(response.body).to.have.property(\"message\");\nexpect(response.body.message).equal(\"Users deleted with success\");",
+              "err": {},
+              "uuid": "e009f2a4-551a-4bd7-9b42-682f9b2aef9a",
+              "parentUUID": null,
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "a1cd246c-c7af-4ee3-ae0e-13259a037858",
+          "title": "Test Suite",
+          "fullFile": "C:\\Users\\Farah.Kenawy\\Desktop\\SDET-TechnicalTask\\SDET-API tests\\APITests\\api.js",
+          "file": "\\APITests\\api.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "creating a new user",
+              "fullTitle": "Test Suite creating a new user",
+              "timedOut": false,
+              "duration": 34,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request(address)\n.post(\"/api/v1/users\") \n.send(register);\n    \n   \nexpect(response.status).toEqual(200);",
+              "err": {
+                "message": "AggregateError",
+                "estack": "AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)",
+                "diff": null
+              },
+              "uuid": "22ce98dc-57ff-40cd-81c8-94b5b9f29e9f",
+              "parentUUID": "a1cd246c-c7af-4ee3-ae0e-13259a037858",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Returns token after creation",
+              "fullTitle": "Test Suite Returns token after creation",
+              "timedOut": false,
+              "duration": 2,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let token;\n const response = await request(address)\n     .post(\"/api/v1/users\")\n     .send(register);\n expect(response.status).equal(200);\n expect(response.body).to.have.property(\"message\");\n expect(response.body.message).equal(\"User is created successufully\");\n expect(response.body).to.have.property(\"token\");",
+              "err": {
+                "message": "AggregateError",
+                "estack": "AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)",
+                "diff": null
+              },
+              "uuid": "0e297ccd-a44e-4d7d-8972-2fd4f73a3593",
+              "parentUUID": "a1cd246c-c7af-4ee3-ae0e-13259a037858",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Logins successfully",
+              "fullTitle": "Test Suite Logins successfully",
+              "timedOut": false,
+              "duration": 2,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let token;\n const response = await request(address)\n     .post(\"/api/v1/auth\")\n     .send(login);\n expect(response.status).equal(200);\n expect(response.body).to.have.property(\"token\");",
+              "err": {
+                "message": "AggregateError",
+                "estack": "AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)",
+                "diff": null
+              },
+              "uuid": "f5b2f834-4c22-42d1-a405-4690ae4d5556",
+              "parentUUID": "a1cd246c-c7af-4ee3-ae0e-13259a037858",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Gets a user ",
+              "fullTitle": "Test Suite Gets a user ",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response =await request(address)\n.get(\"/api/v1/auth\")\n.set('authorization', token);\n   expect(response.statusCode).toEqual(200);",
+              "err": {
+                "message": "ReferenceError: token is not defined",
+                "estack": "ReferenceError: token is not defined\n    at Context.<anonymous> (file:///C:/Users/Farah.Kenawy/Desktop/SDET-TechnicalTask/SDET-API%20tests/APITests/api.js:64:23)\n    at process.processImmediate (node:internal/timers:478:21)",
+                "diff": null
+              },
+              "uuid": "54a82cfb-58b7-4d6c-8859-ca20b2ee1580",
+              "parentUUID": "a1cd246c-c7af-4ee3-ae0e-13259a037858",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Deletes a user",
+              "fullTitle": "Test Suite Deletes a user",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let token;\nconst response = await request(address)\n    .delete(\"/api/v1/auth\")\n    .send({key_admin:''});\nexpect(response.statusCode).toEqual(200);\nexpect(response.body).to.have.property(\"message\");\nexpect(response.body.message).toEqual(\"Success\");",
+              "err": {
+                "message": "AggregateError",
+                "estack": "AggregateError\n    at internalConnectMultiple (node:net:1114:18)\n    at afterConnectMultiple (node:net:1667:5)",
+                "diff": null
+              },
+              "uuid": "09d2f456-655f-421a-8938-5ea21a424db9",
+              "parentUUID": "a1cd246c-c7af-4ee3-ae0e-13259a037858",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete All Users",
+              "fullTitle": "Test Suite Delete All Users",
+              "timedOut": false,
+              "duration": 1,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "it('Should not delete all users with invalid key admin', async () => {\n  const response = await request(address).delete('/api/v1/all-users').send({\n    key_admin: '',\n  });\n  expect(response.statusCode).toEqual(403);\n  expect(response.body.message).toEqual('Unauthorized access');\n});",
+              "err": {},
+              "uuid": "5d06c2c2-4e1a-4208-a1f6-4f7df77b5cd8",
+              "parentUUID": "a1cd246c-c7af-4ee3-ae0e-13259a037858",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5d06c2c2-4e1a-4208-a1f6-4f7df77b5cd8"
+          ],
+          "failures": [
+            "22ce98dc-57ff-40cd-81c8-94b5b9f29e9f",
+            "0e297ccd-a44e-4d7d-8972-2fd4f73a3593",
+            "f5b2f834-4c22-42d1-a405-4690ae4d5556",
+            "54a82cfb-58b7-4d6c-8859-ca20b2ee1580",
+            "09d2f456-655f-421a-8938-5ea21a424db9"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 41,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [
+        "7e5dfdb9-07a8-4061-a603-88054b7a3f92"
+      ],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.3.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

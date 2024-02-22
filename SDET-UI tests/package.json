@@ -1,0 +1,21 @@
+
+{
+  "name": "sdet-nightwatch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nightwatch ./tests --headless",
+    "testContactUs": "nightwatch ./tests/contactUs.js",
+    "testSearchResult": "nightwatch ./tests/searchResult.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chromedriver": "^121.0.0",
+    "nightwatch": "^3.3.8"
+    
+  }
+}
+  

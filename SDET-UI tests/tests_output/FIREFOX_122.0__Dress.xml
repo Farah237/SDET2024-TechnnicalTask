@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="Dress"
+    errors="0" failures="1" hostname="" id="" package="Dress" skipped="1"
+    tests="1" time="0.1670" timestamp="">
+  
+    <testcase name="2.1 Checks SearchBar&#39;s Visibility" classname="Dress" time="0.07500" assertions="1">  <failure message="Cannot read properties of undefined (reading &#39;search&#39;)">TypeError: Cannot read properties of undefined (reading &#39;search&#39;)
+    at DescribeInstance.&lt;anonymous&gt; (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\tests\Dress.js:3:40)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+    
+    <testcase
+      name="2.2 Searches For Dress and Validates Results" classname="Dress">
+      <skipped />
+    </testcase>
+    
+  
+  </testsuite>
+</testsuites>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="1"
+            tests="7">
+
+  <testsuite name="contactUs"
+    errors="1" failures="1" hostname="" id="" package="contactUs" skipped="0"
+    tests="7" time="145.3" timestamp="">
+  
+    <testcase name="Fill in the fields" classname="contactUs" time="11.98" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Enter a text instead of an E-mail" classname="contactUs" time="11.17" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Enter Invalid Email" classname="contactUs" time="15.96" assertions="4">
+
+    
+
+    
+
+      <failure message="Expected element @errorMessage &lt;.alert-danger&gt; to be visible - element was not found - expected &#34;visible&#34; but got: &#34;not found&#34; (5288ms)">    at DescribeInstance.&lt;anonymous&gt; (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\tests\contactUs.js:84:25)</failure>
+
+    
+    <error message="Unable to locate element: .alert-danger using css selector" type="error"><![CDATA[
+    NoSuchElementError: Unable to locate element: .alert-danger using css selector
+    at throwDecodedError (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\error.js:524:15)
+    at ChromeDriver.handleErrorResponse (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\transport\selenium-webdriver\index.js:401:7)
+    at TransportActions.makeResult (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\transport\selenium-webdriver\actions.js:85:20)
+    at Object.locateMultipleElements (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\transport\selenium-webdriver\actions.js:71:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async LocateElement.findElement (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\element\locator.js:167:20)
+    ]]></error>
+    
+    </testcase>
+  
+    <testcase name="Leave the Email field blank" classname="contactUs" time="3.065" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the subject heading blank" classname="contactUs" time="11.29" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the Message field blank" classname="contactUs" time="8.712" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the message field and the subject heading blank" classname="contactUs" time="10.48" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   An element could not be located on the page using the given search parameters.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

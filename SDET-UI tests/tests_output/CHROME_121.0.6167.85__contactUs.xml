@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="9"
+            failures="5"
+            tests="8">
+
+  <testsuite name="contactUs"
+    errors="9" failures="5" hostname="" id="" package="contactUs" skipped="0"
+    tests="8" time="127.7" timestamp="">
+  
+    <testcase name="Fill in the fields" classname="contactUs" time="9.625" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Enter Invalid Email" classname="contactUs" time="15.62" assertions="4">
+
+    
+
+    
+
+      <failure message="Expected element @errorMessage &lt;.alert-danger&gt; to be visible - element was not found - expected &#34;visible&#34; but got: &#34;not found&#34; (5394ms)">    at DescribeInstance.&lt;anonymous&gt; (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\tests\contactUs.js:63:25)</failure>
+
+    
+    <error message="Unable to locate element: .alert-danger using css selector" type="error"><![CDATA[
+    NoSuchElementError: Unable to locate element: .alert-danger using css selector
+    at throwDecodedError (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\error.js:524:15)
+    at ChromeDriver.handleErrorResponse (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\transport\selenium-webdriver\index.js:401:7)
+    at TransportActions.makeResult (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\transport\selenium-webdriver\actions.js:85:20)
+    at Object.locateMultipleElements (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\transport\selenium-webdriver\actions.js:71:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async LocateElement.findElement (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\nightwatch\lib\element\locator.js:167:20)
+    ]]></error>
+    
+    </testcase>
+  
+    <testcase name="Check for the mandatory fields" classname="contactUs" time="5.065" assertions="5">
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Enter a text instead of an E-mail" classname="contactUs" time="10.33" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the Email field blank" classname="contactUs" time="5.368" assertions="1">  <failure message="Testing if value of element &lt;Element [name=@email]&gt; equals &#39;Trial.123@gmail.com&#39; in 5000ms - expected &#34;equals &#39;Trial.123@gmail.com&#39;&#34; but got: &#34;element could not be located&#34; (5168ms)">    at DescribeInstance.&lt;anonymous&gt; (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\tests\contactUs.js:175:22)</failure>
+
+    
+    <error message="no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)" type="error"><![CDATA[
+    NoSuchWindowError: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+    at Object.throwDecodedError (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\error.js:524:15)
+    at parseHttpResponse (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\http.js:601:13)
+    at Executor.execute (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\http.js:529:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async Driver.findElements (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\webdriver.js:1089:17)
+    ]]></error>
+    
+    </testcase>
+  
+    <testcase name="Leave the subject heading blank" classname="contactUs" time="5.307" assertions="1">  <failure message="Testing if value of element &lt;Element [name=@email]&gt; equals &#39;Trial.123@gmail.com&#39; in 5000ms - expected &#34;equals &#39;Trial.123@gmail.com&#39;&#34; but got: &#34;element could not be located&#34; (5140ms)">    at DescribeInstance.&lt;anonymous&gt; (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\tests\contactUs.js:132:22)</failure>
+
+    
+    <error message="no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)" type="error"><![CDATA[
+    NoSuchWindowError: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+    at Object.throwDecodedError (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\error.js:524:15)
+    at parseHttpResponse (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\http.js:601:13)
+    at Executor.execute (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\http.js:529:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async Driver.findElements (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\webdriver.js:1089:17)
+    ]]></error>
+    
+    </testcase>
+  
+    <testcase name="Leave the message field and the subject heading blank" classname="contactUs" time="5.318" assertions="1">  <failure message="Testing if value of element &lt;Element [name=@email]&gt; equals &#39;Trial.123@gmail.com&#39; in 5000ms - expected &#34;equals &#39;Trial.123@gmail.com&#39;&#34; but got: &#34;element could not be located&#34; (5183ms)">    at DescribeInstance.&lt;anonymous&gt; (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\tests\contactUs.js:155:23)</failure>
+
+    
+    <error message="no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)" type="error"><![CDATA[
+    NoSuchWindowError: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+    at Object.throwDecodedError (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\error.js:524:15)
+    at parseHttpResponse (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\http.js:601:13)
+    at Executor.execute (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\http.js:529:28)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Driver.execute (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\webdriver.js:745:17)
+    at async Driver.findElements (C:\Users\Farah.Kenawy\Desktop\SDET-Nightwatch\node_modules\selenium-webdriver\lib\webdriver.js:1089:17)
+    ]]></error>
+    
+    </testcase>
+  
+
+  
+    <system-err>
+       NoSuchElementError
+   An element could not be located on the page using the given search parameters.
+
+    Try fixing by :
+    1. Please inspect the html before the step
+    2. Verify if an element with the mentioned selector is present in the DOM tree
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+ NoSuchWindowError
+   no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.85)
+    </system-err>
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

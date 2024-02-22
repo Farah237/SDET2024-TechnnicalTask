@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="9">
+
+  <testsuite name="contactUs"
+    errors="0" failures="0" hostname="" id="" package="contactUs" skipped="0"
+    tests="9" time="239.2" timestamp="">
+  
+    <testcase name="Check the visibility of the items" classname="contactUs" time="14.26" assertions="6">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Fill in the fields" classname="contactUs" time="13.77" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Enter a text instead of an E-mail" classname="contactUs" time="13.01" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Enter Invalid Email" classname="contactUs" time="14.27" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the Email field blank" classname="contactUs" time="10.96" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the subject heading blank" classname="contactUs" time="13.45" assertions="4">
+
+    
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the Message field blank" classname="contactUs" time="12.57" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Leave the message field and the subject heading blank" classname="contactUs" time="13.88" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Enter a Text In the order Reference field" classname="contactUs" time="13.43" assertions="3">
+
+    
+
+    
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>

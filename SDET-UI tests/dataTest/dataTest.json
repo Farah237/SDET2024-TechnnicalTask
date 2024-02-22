@@ -1,0 +1,14 @@
+{
+    "emailAddress": "Valid123@test.com",
+    "invalidEmailaddress":"123@@test..con",
+    "invalidEmailaddress2":"Text",
+    "clientMessage":"The Order was broken when I received it",
+    "OrderNumber":"232755707",
+    "wrongOrderNumber":"Text",
+   
+
+    "dummyProduct":"dummy characters", 
+    "product": "dress", 
+    "capitalCharacters":"DRESS"
+    
+}
