@@ -1,6 +1,4 @@
-# SDET Technical Task Test Plan
-
-## 1. Testing an onlinwe webstore using NightwatchJS
+# Testing an online webstore using NightwatchJS
 
 ### a. Contact Us Page Tests
 
