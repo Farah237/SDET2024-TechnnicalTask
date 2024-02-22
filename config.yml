@@ -6,7 +6,7 @@ orbs:
 
 jobs:
   testUI:
-    working_directory: /home/circleci/SDET-2024
+    working_directory: /home/circleci/SDET2024-TechnnicalTask
     docker:
       - image: cimg/node:20.4.0-browsers
     steps:
@@ -41,8 +41,3 @@ jobs:
           path: /home/circleci/SDET-2024/API/mochawesome-report
           destination: reports
 
-workflows:
-  e2e-test:
-    jobs:
-      - testUI
-      - testAPI
